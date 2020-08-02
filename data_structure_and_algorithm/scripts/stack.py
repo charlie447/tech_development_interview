@@ -45,7 +45,7 @@ def check_character_balance(char_string):
 
 # 3. 算术表达式转换
 
-# 4. Fibonacci sequence 斐波那契数列
+# Fibonacci sequence 斐波那契数列
 def fibonacci(n):
     """generate Fibonacci sequence according to following function
     F(n) = 0 when n = 0
