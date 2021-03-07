@@ -33,7 +33,7 @@ def selection_sorting(nums: list, order='acs') -> list:
         for j in range(i + 1, len(nums)):
             if nums[j] < nums[min]:
                 min = j
-                nums[min], nums[i] = nums[i], nums[min]
+        nums[min], nums[i] = nums[i], nums[min]
             # pop the last one, which is the smallest one
     return nums
 
@@ -126,4 +126,4 @@ def heap_sorting(nums):
 if __name__ == "__main__":
     nums = [3, 5, 1, 6, 2, 4, 5]
     # nums = [6,5,4,3,2,1]
-    print(quick_sorting_simplified(nums))
+    print(selection_sorting(nums))

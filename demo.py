@@ -714,6 +714,23 @@ def findNumOfValidWords(words, puzzles):
                 ans[i] += 1
     return ans
 
+
+def intersection(list1, list2):
+    # 求两个数组的交集
+    set_list_1 = set(list1)
+    set_list_2 = set(list2)
+    return [x for x in set_list_1 if x in set_list_2]
+
+
+
+def balance_point(nums):
+    if len(nums) < 2:
+        return
+    for i in range(1, len((nums))):
+        if sum(nums[:i]) == sum(nums[i+1:]):
+            return nums[i]
+
+
 if __name__ == "__main__":
 
     start = time.time()
@@ -731,10 +748,13 @@ if __name__ == "__main__":
 
     '''
     s = "aaa"
-    l1 = ["apple","pleas","please"]
-    l2 = ["aelwxyz","aelpxyz","aelpsxy","saelpxy","xaelpsy"]
+    # l1 = ["apple","pleas","please"]
+    # l2 = ["aelwxyz","aelpxyz","aelpsxy","saelpxy","xaelpsy"]
+    list1=[2,3,4,5]
+    list2=[2,5,8]
+    numbers = [1,3,5,7,8,25,4,20]
 
-    print(findNumOfValidWords(l1, l2))
+    print(intersection(list2, list1))
     end = time.time()
     time_cost = end - start
     # average_time_cost = time_cost / len(cases)
